@@ -1,6 +1,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>OrbMail — Correo que piensa en tu iPhone | Mail that thinks on your iPhone</title>
 <meta name="description" content="OrbMail — private email for iPhone. Your inbox as a living orb, a daily brief written on-device by Apple Intelligence, and a narrator that reads your day. No servers, no trackers.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +15,7 @@
   --paper:#0E1620; --paper-ink:#E7EFF5;
   color-scheme:dark;
 }
-@media (prefers-color-scheme: light){
-  :root:not([data-theme="dark"]){
-    --bg:#F3F6F8; --bg2:#EAF0F4; --panel:#FFFFFF; --line:#D9E3EA; --line2:#C3D1DB;
-    --ink:#0F1B26; --ink2:#42586A; --ink3:#7A8E9E;
-    --cyan:#0B8FAE; --cyan-ink:#087A95; --amber:#C97A10; --glow:rgba(11,143,174,.16);
-    --paper:#FBF7EF; --paper-ink:#1B1B1B;
-    color-scheme:light;
-  }
-}
+
 :root[data-theme="light"]{
   --bg:#F3F6F8; --bg2:#EAF0F4; --panel:#FFFFFF; --line:#D9E3EA; --line2:#C3D1DB;
   --ink:#0F1B26; --ink2:#42586A; --ink3:#7A8E9E;
@@ -155,6 +148,32 @@ footer a{color:var(--ink2);text-decoration:none;margin-right:18px}
 .fin h2{font-size:clamp(2.2rem,5vw,3.6rem)}
 .fin .cta{justify-content:center}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}}
+
+/* --- force dark + mobile polish (added) --- */
+:root{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:dark}
+@media (max-width:760px){
+  #three{display:none}
+  .stage{height:auto;padding:60px 0 16px}
+  .stage-in{position:static;height:auto;overflow:visible}
+  .stage-ui{grid-template-columns:1fr;align-items:start;gap:6px;padding-top:0}
+  .stage-ui .copy{max-width:100%}
+  .phone.fallback{display:block;margin:30px auto 0}
+  .actcap{position:static;left:auto;right:auto;bottom:auto;height:auto;margin-top:20px}
+  .scrollhint{display:none}
+  section{padding:56px 0}
+  .wrap{padding:0 18px}
+  h1{font-size:clamp(2rem,8.5vw,2.9rem)}
+  h2{font-size:clamp(1.6rem,6.5vw,2.1rem)}
+  .lead{font-size:1.02rem}
+  nav .wrap{gap:12px;height:56px}
+  .cta{margin-top:24px}
+}
+@media (max-width:420px){
+  h1{font-size:clamp(1.85rem,9vw,2.4rem)}
+  .btn{padding:12px 16px;font-size:.9rem}
+  .phone.fallback{width:min(250px,82vw)}
+}
 </style>
 
 <nav><div class="wrap">
