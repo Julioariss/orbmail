@@ -122,7 +122,7 @@ section{padding:88px 0}
 .plist p{color:var(--ink2);font-size:.93rem}
 @media(max-width:820px){.plist{grid-template-columns:1fr}}
 /* pricing */
-.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.plans{display:grid;grid-template-columns:minmax(0,560px);justify-content:center;gap:22px;margin-top:40px}
 .plan{border:1px solid var(--line);border-radius:22px;padding:30px;background:var(--panel);display:flex;flex-direction:column;gap:12px}
 .plan.hi{border-color:var(--cyan);box-shadow:0 0 0 1px var(--cyan) inset,0 30px 80px -50px var(--glow)}
 .plan .name{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
@@ -206,7 +206,7 @@ footer a{color:var(--ink2);text-decoration:none;margin-right:18px}
           <a class="btn ghost" href="#system"><span class="en">See how it works</span><span class="es">Ver cómo funciona</span></a>
         </div>
         <div class="badges">
-          <span><i></i>Apple Intelligence</span><span><i></i><span class="en">0 servers</span><span class="es">0 servidores</span></span><span><i></i><span class="en">0 trackers</span><span class="es">0 rastreadores</span></span><span><i></i><span class="en">30 days free</span><span class="es">30 días gratis</span></span>
+          <span><i></i>Apple Intelligence</span><span><i></i><span class="en">0 servers</span><span class="es">0 servidores</span></span><span><i></i><span class="en">0 trackers</span><span class="es">0 rastreadores</span></span><span><i></i><span class="en">100% free</span><span class="es">100% gratis</span></span>
         </div>
         <div class="ai-note"><span class="en">Built for iPhone. Intelligence by <b>Apple Intelligence</b>, on-device — requires iPhone 15 Pro or later for AI features.</span><span class="es">Hecho para iPhone. Inteligencia con <b>Apple Intelligence</b>, en el equipo — requiere iPhone 15 Pro o posterior para las funciones de IA.</span></div>
         <div class="scrollhint mono"><span class="en">Scroll to explore</span><span class="es">Desliza para explorar</span> ↓</div>
@@ -281,15 +281,12 @@ footer a{color:var(--ink2);text-decoration:none;margin-right:18px}
 
 <section id="pricing" style="padding-top:0"><div class="wrap">
   <div class="eyebrow"><span class="en">Pricing</span><span class="es">Precios</span></div>
-  <h2 style="margin-top:12px"><span class="en">Free to use. Premium for the intelligence.</span><span class="es">Gratis para usar. Premium para la inteligencia.</span></h2>
-  <p class="lead" style="margin-top:14px"><span class="en">Everything is unlocked for your first 30 days. After that, the mail client stays free forever; the on-device AI features become Premium.</span><span class="es">Todo desbloqueado durante tus primeros 30 días. Después, el cliente de correo sigue gratis para siempre; las funciones de IA en el equipo pasan a Premium.</span></p>
+  <h2 style="margin-top:12px"><span class="en">Free. Everything included.</span><span class="es">Gratis. Todo incluido.</span></h2>
+  <p class="lead" style="margin-top:14px"><span class="en">OrbMail is completely free — no subscriptions, no ads, ever. Every feature is unlocked, including the on-device AI, which runs on your iPhone with Apple Intelligence.</span><span class="es">OrbMail es completamente gratis — sin suscripciones, sin anuncios, nunca. Todas las funciones están desbloqueadas, incluida la IA en el equipo, que corre en tu iPhone con Apple Intelligence.</span></p>
   <div class="plans">
-    <div class="plan"><div class="name"><span class="en">Free</span><span class="es">Gratis</span></div><div class="price">US$0</div>
-      <ul><li><span class="en">Orb, Diagram and Mail with clusters</span><span class="es">Orb, Diagrama y Correo con clusters</span></li><li><span class="en">Any account: Gmail, iCloud, Outlook, Yahoo, IMAP</span><span class="es">Cualquier cuenta: Gmail, iCloud, Outlook, Yahoo, IMAP</span></li><li><span class="en">Mail parity: undo send, scheduled send, signatures, rules, VIP</span><span class="es">Paridad con Mail: deshacer envío, programado, firmas, reglas, VIP</span></li><li><span class="en">Works on every iPhone with iOS 26</span><span class="es">Funciona en todo iPhone con iOS 26</span></li></ul>
-      <p class="note"><span class="en">No ads, ever — ads would contradict the privacy promise.</span><span class="es">Sin publicidad, nunca — contradiría la promesa de privacidad.</span></p></div>
-    <div class="plan hi"><div class="name">OrbMail Premium</div><div class="price">US$1.99<small> /<span class="en">month</span><span class="es">mes</span></small> <small style="margin-left:10px">· US$19.99 /<span class="en">year</span><span class="es">año</span></small></div>
-      <ul><li><span class="en">The Daily — three editions a day, illustrated, PDF export</span><span class="es">El Diario — tres ediciones al día, ilustrado, exportar PDF</span></li><li><span class="en">Narrator and Siri newscast</span><span class="es">Locutor y noticiero por Siri</span></li><li><span class="en">AI clusters, summaries, actions, ✦ replies and reminders</span><span class="es">Clusters con IA, resúmenes, acciones, respuestas ✦ y recordatorios</span></li><li><span class="en">All on-device with Apple Intelligence</span><span class="es">Todo en el equipo con Apple Intelligence</span></li></ul>
-      <p class="note"><span class="en">Requires iPhone 15 Pro or later (Apple Intelligence). 30 days free, cancel anytime.</span><span class="es">Requiere iPhone 15 Pro o posterior (Apple Intelligence). 30 días gratis, cancela cuando quieras.</span></p></div>
+    <div class="plan hi"><div class="name"><span class="en">Everything, free</span><span class="es">Todo, gratis</span></div><div class="price">US$0</div>
+      <ul><li><span class="en">Orb, Diagram and Mail with clusters</span><span class="es">Orb, Diagrama y Correo con clusters</span></li><li><span class="en">The Daily — three editions a day, illustrated, PDF export</span><span class="es">El Diario — tres ediciones al día, ilustrado, exportar PDF</span></li><li><span class="en">Narrator and Siri newscast</span><span class="es">Locutor y noticiero por Siri</span></li><li><span class="en">AI clusters, summaries, actions, ✦ replies and reminders</span><span class="es">Clusters con IA, resúmenes, acciones, respuestas ✦ y recordatorios</span></li><li><span class="en">Any account: Gmail, iCloud, Outlook, Yahoo, IMAP</span><span class="es">Cualquier cuenta: Gmail, iCloud, Outlook, Yahoo, IMAP</span></li></ul>
+      <p class="note"><span class="en">No ads, ever — they would contradict the privacy promise. The mail client works on every iPhone with iOS 26; AI features need an iPhone 15 Pro or later (Apple Intelligence).</span><span class="es">Sin publicidad, nunca — contradiría la promesa de privacidad. El cliente de correo funciona en todo iPhone con iOS 26; las funciones de IA requieren un iPhone 15 Pro o posterior (Apple Intelligence).</span></p></div>
   </div>
 </div></section>
 
